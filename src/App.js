@@ -1,19 +1,38 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+// component imports
+import Header from './components/header.js';
+import Footer from './components/footer.js';
+import Home from './components/Home.js';
+
+const AppDiv = styled.div`
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-size: 1.15em;
+`;
+
+export const CenteredHeader = styled.h4`
+  text-align: center;
+  margin-bottom: 1.25em;
+`;
+
+const ContainerDiv = styled.div`
+  margin: 1% 17% 3% 17%;
+  flex: 1;
+  font-family: 'Open Sans', sans-serif;
+`;
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <AppDiv>
+        <Header />
+        <ContainerDiv>
+          {this.props.children}
+        </ContainerDiv>
+        <Footer />
+      </AppDiv>
     );
   }
 }
