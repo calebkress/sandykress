@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { Linkedin, Twitter } from 'styled-icons/fa-brands';
+import { Envelope } from 'styled-icons/fa-regular'
 
 import { ColorScheme } from '../theme/styleConstants.js'
 
@@ -8,7 +10,7 @@ const FooterDiv = styled.div`
   padding-bottom: 0;
   background-color: ${ColorScheme.mainLight};
   text-align: center;
-  height: 150px;
+  height: 100px;
 `;
 
 const SocialIconList = styled.ul`
@@ -16,18 +18,39 @@ const SocialIconList = styled.ul`
   padding: 0;
 `;
 
-const SocialIcon = styled.li`
+const CustomLinkedin = Linkedin.extend`
+  color: ${ColorScheme.secondary};
+  padding: 0px 10px 0px 10px;
   display: inline;
-  color: red;
-`;
-
-const FAIcon = styled.i`
   &:hover {
-    color: ${ColorScheme.third}
+    color: ${ColorScheme.third};
     transition: all .3s ease;
     transform: scale(1.1) translateY(-5px);
-  }
+  };
 `;
+
+const CustomEnvelope = Envelope.extend`
+  color: ${ColorScheme.secondary};
+  padding: 0px 10px 0px 10px;
+  display: inline;
+  &:hover {
+    color: ${ColorScheme.third};
+    transition: all .3s ease;
+    transform: scale(1.1) translateY(-5px);
+  };
+`;
+
+const CustomTwitter = Twitter.extend`
+  color: ${ColorScheme.secondary};
+  display: inline;
+  padding: 0px 10px 0px 10px;
+  &:hover {
+    color: ${ColorScheme.third};
+    transition: all .3s ease;
+    transform: scale(1.1) translateY(-5px);
+  };
+`;
+
 
 class Footer extends Component {
   render() {
@@ -36,9 +59,9 @@ class Footer extends Component {
         <div className="row social" style={{ margin: 0 }}>
           <div className="col-lg-12">
             <SocialIconList>
-              <SocialIcon><a href="mailto:sandykress@gmail.com" target="_blank"><FAIcon className="fa fa-envelope fa-fw fa-2x" /></a></SocialIcon>
-              <SocialIcon><a href="http://www.linkedin.com/in/sandykress" target="_blank"><FAIcon className="fa fa-linkedin fa-fw fa-2x" /></a></SocialIcon>
-              <SocialIcon><a href="https://twitter.com/Kress_Sandy" target="_blank"><FAIcon className="fa fa-twitter fa-fw fa-2x" /></a></SocialIcon>
+              <a href="mailto:sandykress@gmail.com" target="_blank"><CustomLinkedin size="48" css=""/></a>
+              <a href="http://www.linkedin.com/in/sandykress" target="_blank"><CustomEnvelope size="48"/></a>
+              <a href="https://twitter.com/Kress_Sandy" target="_blank"><CustomTwitter size="48"/></a>
             </SocialIconList>
             <br />
           </div>

@@ -10,7 +10,7 @@ injectGlobal`
     padding: 0;
     color: ${ColorScheme.mainText};
   }
-  h4, h5, h6 {
+  h4, h5, h6, p {
     font-family: 'Open Sans', sans-serif;
   }
   hr {

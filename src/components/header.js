@@ -20,6 +20,7 @@ const TitleBar = styled.h1`
 const HeadDiv = styled.div`
   padding-top: 5vh;
   text-align: center;
+  font-family: 'Zilla Slab Highlight', sans-serif;
   color: black;
 `;
 
@@ -42,7 +43,7 @@ class Header extends Component {
             <NavLink to='religion'>RELIGION</NavLink>
             <NavLink to='education'>EDUCATION</NavLink>
             <NavLink to='lifestyle'>LIFESTYLE</NavLink>
-            <hr />
+            <hr width="50%"/>
             <Route exact path="/" component={Home} />
             <Route path="/religion" component={Religion} />
             <Route path="/education" component={Education} />
