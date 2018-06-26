@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Linkedin, Twitter } from 'styled-icons/fa-brands';
 import { Envelope } from 'styled-icons/fa-regular'
 
 import { ColorScheme } from '../theme/styleConstants.js'
 
+// css for footer area + background
 const FooterDiv = styled.div`
   padding-top: 3rem;
   padding-bottom: 0;
@@ -13,37 +14,29 @@ const FooterDiv = styled.div`
   height: 100px;
 `;
 
-const CustomLinkedin = Linkedin.extend`
+// define custom css for icons
+const IconCss = css`
   color: ${ColorScheme.secondary};
   padding: 0px 10px 0px 10px;
   display: inline;
   &:hover {
-    color: ${ColorScheme.third};
+    color: ${ColorScheme.tertiary};
     transition: all .3s ease;
     transform: scale(1.1) translateY(-5px);
   };
+`
+
+// apply css to each icon
+const CustomLinkedin = Linkedin.extend`
+  ${IconCss}
 `;
 
 const CustomEnvelope = Envelope.extend`
-  color: ${ColorScheme.secondary};
-  padding: 0px 10px 0px 10px;
-  display: inline;
-  &:hover {
-    color: ${ColorScheme.third};
-    transition: all .3s ease;
-    transform: scale(1.1) translateY(-5px);
-  };
+  ${IconCss}
 `;
 
 const CustomTwitter = Twitter.extend`
-  color: ${ColorScheme.secondary};
-  display: inline;
-  padding: 0px 10px 0px 10px;
-  &:hover {
-    color: ${ColorScheme.third};
-    transition: all .3s ease;
-    transform: scale(1.1) translateY(-5px);
-  };
+  ${IconCss}
 `;
 
 

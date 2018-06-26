@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 
-import { CenteredHeader } from '../App.js'
+const CenteredHeader = styled.h4`
+  text-align: center;
+  margin-bottom: 1.25em;
+`;
 
 class Home extends Component {
   render() {

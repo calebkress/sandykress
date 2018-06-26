@@ -11,11 +11,6 @@ const AppDiv = styled.div`
   font-size: 1.15em;
 `;
 
-export const CenteredHeader = styled.h4`
-  text-align: center;
-  margin-bottom: 1.25em;
-`;
-
 const ContainerDiv = styled.div`
   margin: 1% 17% 3% 17%;
   flex: 1;
