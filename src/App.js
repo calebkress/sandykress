@@ -3,7 +3,6 @@ import styled from 'styled-components';
 // component imports
 import Header from './components/header.js';
 import Footer from './components/footer.js';
-import Home from './components/Home.js';
 
 const AppDiv = styled.div`
   display: flex;

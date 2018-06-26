@@ -13,11 +13,6 @@ const FooterDiv = styled.div`
   height: 100px;
 `;
 
-const SocialIconList = styled.ul`
-  list-style: none;
-  padding: 0;
-`;
-
 const CustomLinkedin = Linkedin.extend`
   color: ${ColorScheme.secondary};
   padding: 0px 10px 0px 10px;
@@ -58,11 +53,9 @@ class Footer extends Component {
       <FooterDiv>
         <div className="row social" style={{ margin: 0 }}>
           <div className="col-lg-12">
-            <SocialIconList>
-              <a href="mailto:sandykress@gmail.com" target="_blank"><CustomLinkedin size="48" css=""/></a>
-              <a href="http://www.linkedin.com/in/sandykress" target="_blank"><CustomEnvelope size="48"/></a>
-              <a href="https://twitter.com/Kress_Sandy" target="_blank"><CustomTwitter size="48"/></a>
-            </SocialIconList>
+              <a href="mailto:sandykress@gmail.com" target="_blank" rel="noopener noreferrer"><CustomLinkedin size="48"/></a>
+              <a href="http://www.linkedin.com/in/sandykress" target="_blank" rel="noopener noreferrer"><CustomEnvelope size="48"/></a>
+              <a href="https://twitter.com/Kress_Sandy" target="_blank" rel="noopener noreferrer"><CustomTwitter size="48"/></a>
             <br />
           </div>
         </div>

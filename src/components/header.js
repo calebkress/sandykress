@@ -10,7 +10,8 @@ import Lifestyle from './lifestyle';
 const Profile = styled.img`
   width: 20em;
   height: 12em;
-  border-radius: 10%;
+  border-radius: 18%;
+  border: 1px solid;
 `;
 
 const TitleBar = styled.h1`
@@ -43,7 +44,7 @@ class Header extends Component {
             <NavLink to='religion'>RELIGION</NavLink>
             <NavLink to='education'>EDUCATION</NavLink>
             <NavLink to='lifestyle'>LIFESTYLE</NavLink>
-            <hr width="50%"/>
+            <hr />
             <Route exact path="/" component={Home} />
             <Route path="/religion" component={Religion} />
             <Route path="/education" component={Education} />
