@@ -2,8 +2,9 @@ import { injectGlobal } from 'styled-components';
 import { ColorScheme } from './styleConstants';
 
 injectGlobal`
-  @import url('https://fonts.googleapis.com/css?family=Zilla+Slab+Highlight');
+  @import url('https://fonts.googleapis.com/css?family=Fira+Sans');
   @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+  @import url('https://fonts.googleapis.com/css?family=Raleway');
   body {
     height: 100%;
     margin: 0;

@@ -6,6 +6,8 @@ const CenteredHeader = styled.h4`
   margin-bottom: 1.25em;
 `;
 
+
+
 class Home extends Component {
   render() {
     return (

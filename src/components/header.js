@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import Home from './Home';
 import Religion from './religion';
@@ -16,22 +16,31 @@ const Profile = styled.img`
 
 const TitleBar = styled.h1`
   color: black;
+  font-family: "Fira Sans";
 `
 
 const HeadDiv = styled.div`
   padding-top: 5vh;
   text-align: center;
-  font-family: 'Zilla Slab Highlight', sans-serif;
   color: black;
 `;
 
-const NavLink = styled(Link)`
+// overall navbar text css
+const NavCss = css`
   display: inline-flex;
-  margin: 0 5px;
-  color: black;
   font-size: 16px;
+  color: black;
+  margin: 0 5px;
+  font-family: "Raleway";
+`
+// apply NavCss to links + breaks
+const NavLink = styled(Link)`
+  ${NavCss};
 `;
 
+const NavBreak = styled.p`
+  ${NavCss};
+`;
 class Header extends Component {
   render() {
     return (
@@ -41,8 +50,11 @@ class Header extends Component {
         <Router>
           <div>
             <NavLink to='/'>HOME</NavLink>
+            <NavBreak> / </NavBreak>
             <NavLink to='religion'>RELIGION</NavLink>
+            <NavBreak> / </NavBreak>
             <NavLink to='education'>EDUCATION</NavLink>
+            <NavBreak> / </NavBreak>
             <NavLink to='lifestyle'>LIFESTYLE</NavLink>
             <hr />
             <Route exact path="/" component={Home} />
